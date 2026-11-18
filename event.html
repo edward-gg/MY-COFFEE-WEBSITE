@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Workshops</title>
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- site styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_event.css">
+
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" 
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header-container">
+        <div class="logo">Bean Boutique</div>
+
+        <div class="header-right">
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="equipment.html">Equipments</a></li>
+                    <li><a href="beans.html">Coffee Beans</a></li>
+                    <li><a href="event.html" class="active">Events</a></li>
+                    <li><a href="offer.html">Subscriptions</a></li>
+                </ul>
+            </nav>
+            <div class="cart-container">
+                <button class="cart-icon-btn" id="cartToggleBtn"
+                    aria-label="Shopping Cart">
+                    🛒<span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+            <button class="hamburger" id="hamburgerBtn"
+                aria-label="Toggle Navigation">
+                ☰ Menu
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= HERO BANNER WITH PHOTO ================= -->
+    <section class="event-hero">
+        <div class="event-hero-text">
+            <span class="event-hero-label">Bean Boutique Community</span>
+            <h1>Workshops & Tasting Events</h1>
+            <p>Small-group sessions with our head roaster — learn, taste, and meet fellow coffee lovers.</p>
+        </div>
+
+        <div class="event-hero-image">
+            <img src="general-images/hero-2.jpg" alt="Coffee workshop session">
+        </div>
+
+        <div class="event-hero-stats">
+            <div><strong>4</strong><span>Upcoming</span></div>
+            <div><strong>12</strong><span>Max per Session</span></div>
+            <div><strong>Free</strong><span>Coffee Included</span></div>
+        </div>
+    </section>
+
+    <!-- ================= MAIN ================= -->
+    <main class="event-container">
+
+        <!-- LEFT COLUMN : Multi Events Cards -->
+        <div class="events-column">
+            <h2 class="section-title">Upcoming Events & Workshops</h2>
+            <p class="section-subtitle">Select an event below to register your spot.</p>
+
+            <!-- Event 1 -->
+            <div class="event-card selected" 
+                data-event-id="1" 
+                data-event-name="Coffee Tasting Session">
+                <div class="card-header">
+                    <span class="event-badge">Oct 24, 2026</span>
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="event-title">Coffee Tasting Session</div>
+                <p class="event-desc">
+                    Explore single-origin coffees from Ethiopia, Colombia and Kenya 
+                    guided by our head roaster. Includes tasting notes booklet.
+                </p>
+                <div class="event-meta">
+                    <span><i class="fa-regular fa-clock"></i> 6:00 PM – 8:00 PM</span>
+                    <span><i class="fa-solid fa-location-dot"></i> In-store</span>
+                    <span><i class="fa-solid fa-hourglass-half"></i> 2 hours</span>
+                </div>
+
+                <div class="card-footer-row">
+                    <div class="seats-left">
+                        <span class="seats-dot"></span>
+                        <span>6 seats left</span>
+                    </div>
+                    <div class="attendees">
+                        <span class="avatar">JM</span>
+                        <span class="avatar">SK</span>
+                        <span class="avatar">RP</span>
+                        <span class="attendees-text">+5 joining</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card" 
+                data-event-id="2" 
+                data-event-name="Home Brewing Class">
+                <div class="card-header">
+                    <span class="event-badge">Nov 12, 2026</span>
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+                <div class="event-title">Home Brewing Class</div>
+                <p class="event-desc">
+                    Master pour-over, French press and AeroPress techniques. 
+                    All equipment provided. Take home 250g of beans.
+                </p>
+                <div class="event-meta">
+                    <span><i class="fa-regular fa-clock"></i> 10:00 AM – 1:00 PM</span>
+                    <span><i class="fa-solid fa-location-dot"></i> In-store</span>
+                    <span><i class="fa-solid fa-hourglass-half"></i> 3 hours</span>
+                </div>
+
+                <div class="card-footer-row">
+                    <div class="seats-left">
+                        <span class="seats-dot"></span>
+                        <span>4 seats left</span>
+                    </div>
+                    <div class="attendees">
+                        <span class="avatar">AT</span>
+                        <span class="avatar">LR</span>
+                        <span class="attendees-text">+6 joining</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card" 
+                data-event-id="3" 
+                data-event-name="Meet the Roaster">
+                <div class="card-header">
+                    <span class="event-badge">Dec 05, 2026</span>
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+                <div class="event-title">Meet the Roaster</div>
+                <p class="event-desc">
+                    An evening with our roastery team. Learn about sourcing, 
+                    roasting profiles and the journey from bean to cup.
+                </p>
+                <div class="event-meta">
+                    <span><i class="fa-regular fa-clock"></i> 5:00 PM – 7:00 PM</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Roastery</span>
+                    <span><i class="fa-solid fa-hourglass-half"></i> 2 hours</span>
+                </div>
+
+                <div class="card-footer-row">
+                    <div class="seats-left">
+                        <span class="seats-dot"></span>
+                        <span>8 seats left</span>
+                    </div>
+                    <div class="attendees">
+                        <span class="avatar">MK</span>
+                        <span class="avatar">PN</span>
+                        <span class="attendees-text">+2 joining</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="event-card" 
+                data-event-id="4" 
+                data-event-name="Latte Art Workshop">
+                <div class="card-header">
+                    <span class="event-badge">Jan 18, 2027</span>
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+                <div class="event-title">Latte Art Workshop</div>
+                <p class="event-desc">
+                    Learn the fundamentals of milk steaming and pouring hearts, 
+                    rosettas, and tulips. Small groups with one-on-one guidance 
+                    from our barista team.
+                </p>
+                <div class="event-meta">
+                    <span><i class="fa-regular fa-clock"></i> 2:00 PM – 5:00 PM</span>
+                    <span><i class="fa-solid fa-location-dot"></i> In-store</span>
+                    <span><i class="fa-solid fa-hourglass-half"></i> 3 hours</span>
+                </div>
+
+                <div class="card-footer-row">
+                    <div class="seats-left">
+                        <span class="seats-dot"></span>
+                        <span>10 seats left</span>
+                    </div>
+                    <div class="attendees">
+                        <span class="avatar">EC</span>
+                        <span class="avatar">HS</span>
+                        <span class="attendees-text">+2 joining</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN : Register Form -->
+        <div class="form-column" id="formSection">
+            <div class="registration-card">
+
+                <!-- Dark header band -->
+                <div class="form-accent">
+                    <div class="form-header">
+                        <span class="form-badge">
+                            <i class="fa-solid fa-star"></i> Limited Spots
+                        </span>
+                        <h2>Register for an Event</h2>
+                        <p>Fill out your details below to reserve your spot. We'll email you a confirmation within minutes.</p>
+                    </div>
+                </div>
+
+                <!-- Perks strip -->
+                <div class="form-perks">
+                    <div class="perk">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <span>Free coffee</span>
+                    </div>
+                    <div class="perk">
+                        <i class="fa-solid fa-gift"></i>
+                        <span>Take-home beans</span>
+                    </div>
+                    <div class="perk">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>Small groups</span>
+                    </div>
+                </div>
+
+                <!-- What to bring strip (polite version) -->
+                <div class="bring-strip">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Everything you need is provided — including all equipment, ingredients, and aprons. We simply ask that you bring yourself and a willingness to learn.</span>
+                </div>
+
+                <form id="multiEventForm">
+
+                    <!-- Event Select -->
+                    <div class="form-group"> 
+                        <label for="eventSelect">Selected Event</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <select id="eventSelect">
+                                <option value="Coffee Tasting Session">Coffee Tasting Session</option>
+                                <option value="Home Brewing Class">Home Brewing Class</option>
+                                <option value="Meet the Roaster">Meet the Roaster</option>
+                                <option value="Latte Art Workshop">Latte Art Workshop</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Name Row -->
+                    <div class="form-row">
+                        <div class="form-group" id="groupFirstName">
+                            <label for="firstName">First Name</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="firstName" placeholder="John" autocomplete="off">
+                            </div>
+                            <span class="error-message">First name must be at least 2 characters.</span>
+                        </div>
+
+                        <div class="form-group" id="groupLastName">
+                            <label for="lastName">Last Name</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="lastName" placeholder="Doe" autocomplete="off">
+                            </div>
+                            <span class="error-message">Last name must be at least 2 characters.</span>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group" id="groupEmail">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="email" placeholder="john.doe@example.com" autocomplete="off">
+                        </div>
+                        <span class="error-message">Please enter a valid email address.</span>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn-submit">
+                        <span>Register & Send Email</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <!-- Trust text -->
+                    <p class="form-trust">
+                        <i class="fa-solid fa-lock"></i>
+                        Your details are only used for this event. No spam.
+                    </p>
+
+                    <!-- Footer note -->
+                    <p class="form-footer-note">
+                        Questions? <a href="mailto:hello@beanboutique.co.uk">Email us</a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+   <!-- ================= FOOTER ================= -->
+<footer class="footer-container">
+    <div class="footer-content">
+        <div class="footer-column footer-brand">
+            <div class="footer-logo-wrap">
+                <span class="footer-logo-icon">☕</span>
+                <span class="footer-logo">Bean Boutique</span>
+            </div>
+            <p class="footer-tagline">
+                A neighbourhood coffee shop, roasting small batches since 2018. 
+                From bean to cup — with the craft we love.
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram" class="social-btn">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" aria-label="Facebook" class="social-btn">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" aria-label="Twitter" class="social-btn">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" aria-label="TikTok" class="social-btn">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h2 class="footer-heading">Shop</h2>
+            <ul class="footer-links">
+                <li><a href="beans.html">Coffee Beans</a></li>
+                <li><a href="equipment.html">Brewing Equipment</a></li>
+                <li><a href="offer.html">Subscriptions</a></li>
+                <li><a href="cart.html">Your Cart</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h2 class="footer-heading">Discover</h2>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="event.html">Events & Workshops</a></li>
+                <li><a href="index.html#find-us">Find Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h2 class="footer-heading">Visit Us</h2>
+            <div class="footer-hours">
+                <span class="open-pill">● Open Now</span>
+                <p><strong>Mon – Fri:</strong> 7am – 7pm</p>
+                <p><strong>Sat – Sun:</strong> 8am – 6pm</p>
+            </div>
+            <ul class="footer-links footer-contact">
+                <li>
+                    <a href="index.html#find-us">📍 42 Redchurch Street, Shoreditch, London</a>
+                </li>
+                <li><a href="mailto:hello@beanboutique.co.uk">hello@beanboutique.co.uk</a></li>
+                <li><a href="tel:+442079460958">+44 20 7946 0958</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Front End Web Development. All rights reserved.</p>
+        <p class="footer-message">Built By Min Thant Zan Ko-2025D3801-SFInternational College</p>
+    </div>
+</footer>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+    <script src="script_event.js"></script>
+</body>
+</html>

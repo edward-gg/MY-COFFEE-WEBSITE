@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewing Equipment</title>
+
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" 
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"  >
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_equipment.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header-container">
+        <div class="logo">Bean Boutique</div>
+
+        <div class="header-right">
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="equipment.html" class="active">Equipments</a></li>
+                    <li><a href="beans.html">Coffee Beans</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="offer.html">Subscriptions</a></li>
+                </ul>
+            </nav>
+            <div class="cart-container">
+                <button class="cart-icon-btn" id="cartToggleBtn"
+                    aria-label="Shopping Cart">
+                    🛒<span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+            <button class="hamburger" id="hamburgerBtn"
+                aria-label="Toggle Navigation">
+                ☰ Menu
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main-container">
+
+        <!-- HERO -->
+        <section class="equip-hero" data-aos="zoom-in">
+            <div class="equip-hero-text">
+                <span class="equip-hero-label">Bean Boutique Collection</span>
+                <h1>Brew Better at Home</h1>
+                <p>Hand-picked equipment, tested by our baristas, shipped UK-wide.</p>
+                <div class="equip-hero-stats">
+                    <div><strong>15</strong><span>Products</span></div>
+                    <div><strong>2yr</strong><span>Warranty</span></div>
+                    <div><strong>Free</strong><span>UK Delivery</span></div>
+                </div>
+            </div>
+            <div class="equip-hero-image">
+                <img src="bean-images/equipment-hero.jpg" alt="Coffee equipment">
+            </div>
+        </section>
+
+        <!-- TABS + SEARCH -->
+        <div class="equip-tabs" data-aos="zoom-in" data-aos-delay="100">
+            <button class="equip-tab active" data-category="All">All Equipment</button>
+            <button class="equip-tab" data-category="Espresso Machines">Espresso Machines</button>
+            <button class="equip-tab" data-category="Brewers">Brewers</button>
+            <button class="equip-tab" data-category="Grinders">Grinders</button>
+            <button class="equip-tab" data-category="Accessories">Accessories</button>
+            <input type="text" class="search-box" id="searchBox"
+                placeholder="Search equipment...">
+        </div>
+
+        <!-- EQUIPMENT LIST -->
+        <div class="equip-list" id="equipList"></div>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <div class="footer-logo-wrap">
+                    <span class="footer-logo-icon">☕</span>
+                    <span class="footer-logo">Bean Boutique</span>
+                </div>
+                <p class="footer-tagline">
+                    A neighbourhood coffee shop, roasting small batches since 2018. 
+                    From bean to cup — with the craft we love.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" class="social-btn">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="social-btn">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-btn">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#" aria-label="TikTok" class="social-btn">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h2 class="footer-heading">Shop</h2>
+                <ul class="footer-links">
+                    <li><a href="beans.html">Coffee Beans</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="offer.html">Subscriptions</a></li>
+                    <li><a href="cart.html">Your Cart</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2 class="footer-heading">Discover</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="event.html">Events & Workshops</a></li>
+                    <li><a href="index.html#find-us">Find Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2 class="footer-heading">Visit Us</h2>
+                <div class="footer-hours">
+                    <span class="open-pill">● Open Now</span>
+                    <p><strong>Mon – Fri:</strong> 7am – 7pm</p>
+                    <p><strong>Sat – Sun:</strong> 8am – 6pm</p>
+                </div>
+                <ul class="footer-links footer-contact">
+                    <li>
+                        <a href="index.html#find-us">📍 42 Redchurch Street, Shoreditch, London</a>
+                    </li>
+                    <li><a href="mailto:hello@beanboutique.co.uk">hello@beanboutique.co.uk</a></li>
+                    <li><a href="tel:+442079460958">+44 20 7946 0958</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Front End Web Development. All rights reserved.</p>
+            <p class="footer-message">Built By Min Thant Zan Ko-2025D3801-SFInternational College</p>
+        </div>
+    </footer>
+
+    <!-- ================= LIGHTBOX MODAL ================= -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <div class="swiper lightbox-swiper">
+            <div class="swiper-wrapper" id="lightboxWrapper"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script_equipment.js"></script>
+</body>
+</html>
